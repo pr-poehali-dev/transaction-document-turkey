@@ -105,7 +105,7 @@ const TransferDocument = () => {
 
                 <div>
                   <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">Transfer Tutarı</h3>
-                  <div className="bg-gradient-to-br from-primary/5 to-purple-100/50 rounded-lg p-4 border-2 border-primary/20">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-lg p-4 border-2 border-blue-300">
                     <div className="flex items-baseline gap-2">
                       <Icon name="DollarSign" size={24} className="text-primary" />
                       <span className="text-4xl font-bold text-slate-900">275,000</span>
@@ -151,21 +151,31 @@ const TransferDocument = () => {
               </div>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-slate-200 flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-purple-200 flex items-center justify-center border-4 border-white shadow-lg">
-                  <Icon name="CheckCircle2" size={40} className="text-primary" />
+            <div className="mt-8 pt-8 border-t border-slate-200">
+              <div className="flex items-end justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center border-4 border-white shadow-lg">
+                    <Icon name="CheckCircle2" size={32} className="text-[#003d82]" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-slate-500">Dijital İmza</p>
+                    <p className="font-mono text-sm text-slate-700">SHA-256: 8f7a2b...</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs text-slate-500">Dijital İmza</p>
-                  <p className="font-mono text-sm text-slate-700">SHA-256: 8f7a2b...</p>
+                
+                <div className="text-right">
+                  <div className="mb-3">
+                    <img 
+                      src="https://cdn.poehali.dev/files/af7cfce1-15c7-45e2-9ad2-c88c9e5ec3e8.jpg" 
+                      alt="İmza" 
+                      className="h-16 ml-auto"
+                    />
+                  </div>
+                  <div className="border-t border-slate-400 pt-1">
+                    <p className="font-semibold text-slate-900">Ahmet Yılmaz</p>
+                    <p className="text-xs text-slate-500">Şube Müdürü</p>
+                  </div>
                 </div>
-              </div>
-              
-              <div className="text-right">
-                <p className="text-xs text-slate-500 mb-1">Onaylayan Yetkili</p>
-                <p className="font-semibold text-slate-900">Ahmet Yılmaz</p>
-                <p className="text-xs text-slate-500">Şube Müdürü</p>
               </div>
             </div>
 
@@ -176,12 +186,7 @@ const TransferDocument = () => {
             </div>
           </div>
 
-          <div className="absolute top-4 right-4 opacity-10">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-purple-600 blur-2xl"></div>
-          </div>
-          <div className="absolute bottom-4 left-4 opacity-10">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 blur-2xl"></div>
-          </div>
+
         </Card>
 
         <div className="mt-6 text-center">
