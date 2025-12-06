@@ -163,12 +163,10 @@ const TransferDocument = () => {
                 </div>
                 
                 <div className="text-right">
-                  <div className="mb-3">
-                    <img 
-                      src="https://cdn.poehali.dev/files/af7cfce1-15c7-45e2-9ad2-c88c9e5ec3e8.jpg" 
-                      alt="İmza" 
-                      className="h-16 ml-auto"
-                    />
+                  <div className="mb-3 h-16 flex items-center justify-end">
+                    <div className="text-4xl font-serif italic text-[#003d82] opacity-80" style={{fontFamily: 'Brush Script MT, cursive'}}>
+                      Ahmet Yılmaz
+                    </div>
                   </div>
                   <div className="border-t border-slate-400 pt-1">
                     <p className="font-semibold text-slate-900">Ahmet Yılmaz</p>
