@@ -173,37 +173,69 @@ const TransferDocument = () => {
                 </div>
                 
                 <div className="text-right">
-                  <div className="mb-3 h-28 flex items-center justify-end">
-                    <svg viewBox="0 0 450 120" className="h-full w-auto">
+                  <div className="mb-3 h-32 flex items-center justify-end relative">
+                    <svg viewBox="0 0 480 140" className="h-full w-auto">
                       <defs>
                         <filter id="inkBlur">
-                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" />
                         </filter>
                       </defs>
                       
-                      {/* Подпись в стиле изображения - начальная петля */}
+                      {/* Элегантная каллиграфическая подпись с начальным завитком */}
                       <path 
-                        d="M 25 75 Q 20 65, 22 55 Q 25 45, 35 42 Q 45 40, 52 48 Q 58 55, 58 65 Q 58 75, 50 82 Q 45 86, 42 84 Q 40 82, 42 78 L 45 70 Q 48 62, 55 58 Q 62 55, 72 58 L 85 68 Q 92 75, 95 82 L 98 90 Q 100 95, 105 92 L 112 85 Q 118 78, 125 75 L 135 72 Q 145 70, 155 73 L 168 80 Q 175 85, 180 88 L 188 92 Q 195 95, 202 92 L 210 85 Q 218 75, 228 72 Q 238 70, 248 75 L 260 85 Q 268 92, 275 95 L 285 98 Q 295 100, 305 95 L 315 88 Q 322 82, 328 78 L 338 72 Q 348 68, 358 70 Q 368 72, 375 78 L 385 88 Q 392 95, 398 98 L 408 102 Q 418 105, 428 100 Q 435 96, 438 90" 
-                        stroke="#2c3e8f" 
-                        strokeWidth="2.8" 
+                        d="M 30 80 Q 25 70, 27 60 Q 30 50, 40 47 Q 50 45, 58 52 Q 65 58, 67 68 Q 68 78, 62 86 Q 58 90, 52 88 Q 48 86, 48 82 L 50 75 Q 53 68, 60 65 Q 68 63, 76 66 Q 84 70, 90 76 L 98 86 Q 102 92, 105 96 Q 108 100, 112 98 Q 116 95, 120 90 L 128 80 Q 135 72, 143 68 Q 152 65, 162 68 Q 172 72, 180 78 L 190 88 Q 196 94, 202 98 Q 208 102, 215 99 Q 222 95, 228 88 L 238 76 Q 246 68, 256 65 Q 266 63, 276 67 Q 286 72, 294 80 L 304 92 Q 310 98, 316 102 Q 322 105, 329 102 Q 336 98, 342 91 L 352 80 Q 360 72, 370 69 Q 380 67, 390 71 Q 400 76, 408 84 L 418 95 Q 424 102, 430 106 Q 436 109, 443 106 Q 450 102, 455 96 L 462 88 Q 468 82, 472 80" 
+                        stroke="#1e2a6e" 
+                        strokeWidth="2.2" 
                         fill="none" 
                         strokeLinecap="round" 
                         strokeLinejoin="round"
                         filter="url(#inkBlur)" 
-                        opacity="0.85"
+                        opacity="0.88"
                       />
                       
-                      {/* Дополнительные штрихи для объема */}
+                      {/* Перекрестный штрих через подпись для аутентичности */}
                       <path 
-                        d="M 45 70 Q 47 68, 49 70 M 155 73 Q 157 71, 159 73 M 305 95 Q 307 93, 309 95" 
-                        stroke="#2c3e8f" 
-                        strokeWidth="3.5" 
+                        d="M 95 78 L 110 92" 
+                        stroke="#1e2a6e" 
+                        strokeWidth="2.5" 
                         fill="none" 
                         strokeLinecap="round"
                         filter="url(#inkBlur)" 
-                        opacity="0.6"
+                        opacity="0.82"
                       />
+                      
+                      {/* Декоративный финальный росчерк снизу */}
+                      <path 
+                        d="M 25 100 Q 80 105, 140 102 Q 200 100, 260 103 Q 320 106, 380 102 Q 420 100, 445 98" 
+                        stroke="#1e2a6e" 
+                        strokeWidth="1.8" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.55"
+                      />
+                      
+                      {/* Точки нажима для реалистичности */}
+                      <circle cx="60" cy="65" r="1.5" fill="#1e2a6e" opacity="0.7" filter="url(#inkBlur)"/>
+                      <circle cx="162" cy="68" r="1.5" fill="#1e2a6e" opacity="0.7" filter="url(#inkBlur)"/>
+                      <circle cx="276" cy="67" r="1.5" fill="#1e2a6e" opacity="0.7" filter="url(#inkBlur)"/>
+                      <circle cx="390" cy="71" r="1.5" fill="#1e2a6e" opacity="0.7" filter="url(#inkBlur)"/>
                     </svg>
+                    
+                    {/* Яркая печать банка поверх подписи */}
+                    <div className="absolute top-1/2 right-12 -translate-y-1/2 w-32 h-32 pointer-events-none">
+                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                        <circle cx="100" cy="100" r="96" fill="none" stroke="#003d82" strokeWidth="4" opacity="0.65"/>
+                        <circle cx="100" cy="100" r="88" fill="none" stroke="#003d82" strokeWidth="3" opacity="0.60"/>
+                        <circle cx="100" cy="100" r="78" fill="none" stroke="#003d82" strokeWidth="2" opacity="0.50"/>
+                        <path d="M 100 20 L 100 45 M 180 100 L 155 100 M 100 180 L 100 155 M 20 100 L 45 100" stroke="#003d82" strokeWidth="3" opacity="0.60"/>
+                        <text x="100" y="72" textAnchor="middle" fill="#003d82" fontSize="16" fontWeight="bold" opacity="0.68">TÜRKİYE İŞ</text>
+                        <text x="100" y="90" textAnchor="middle" fill="#003d82" fontSize="16" fontWeight="bold" opacity="0.68">BANKASI A.Ş.</text>
+                        <text x="100" y="110" textAnchor="middle" fill="#003d82" fontSize="13" opacity="0.65">MERKEZ ŞUBESİ</text>
+                        <text x="100" y="128" textAnchor="middle" fill="#003d82" fontSize="12" opacity="0.65">İSTANBUL</text>
+                        <text x="100" y="148" textAnchor="middle" fill="#003d82" fontSize="11" fontFamily="monospace" opacity="0.60">06.12.2025</text>
+                      </svg>
+                    </div>
                   </div>
                   <div className="border-t border-slate-400 pt-1">
                     <p className="font-semibold text-slate-900">Ahmet Yılmaz</p>
