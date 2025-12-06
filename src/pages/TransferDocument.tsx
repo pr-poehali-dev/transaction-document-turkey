@@ -159,60 +159,14 @@ const TransferDocument = () => {
                 
                 <div className="text-right">
                   <div className="mb-3 h-32 flex items-center justify-end relative">
-                    <svg viewBox="0 0 420 140" className="h-full w-auto">
-                      <defs>
-                        <filter id="inkBlur">
-                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
-                        </filter>
-                      </defs>
-                      
-                      {/* Непрерывная плавная каллиграфическая подпись "Yılmaz" */}
-                      <path 
-                        d="M 25 65 Q 28 55, 35 50 Q 42 46, 50 52 Q 58 58, 65 68 L 75 85 Q 80 95, 82 105 Q 83 115, 78 122 Q 75 126, 70 124 Q 68 122, 70 118 Q 72 112, 78 108 Q 85 105, 93 108 Q 100 112, 105 120 Q 108 125, 112 126 Q 116 126, 120 122 Q 125 116, 130 108 Q 136 98, 143 92 Q 150 88, 158 90 Q 166 93, 173 100 Q 178 106, 182 113 Q 185 118, 189 120 Q 193 121, 197 118 Q 202 113, 208 104 Q 215 92, 224 85 Q 233 80, 243 82 Q 253 85, 261 93 Q 268 100, 273 109 Q 276 115, 280 118 Q 284 120, 289 116 Q 295 110, 302 98 Q 310 84, 320 76 Q 330 70, 342 73 Q 354 77, 364 87 Q 372 95, 378 105 Q 382 112, 387 116 Q 392 119, 398 115 Q 405 109, 410 100" 
-                        stroke="#1c2a6b" 
-                        strokeWidth="2.4" 
-                        fill="none" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
-                        filter="url(#inkBlur)" 
-                        opacity="0.87"
-                      />
-                      
-                      {/* Дополнительные акценты для естественности */}
-                      <path 
-                        d="M 50 52 Q 52 50, 54 52" 
-                        stroke="#1c2a6b" 
-                        strokeWidth="3" 
-                        fill="none" 
-                        strokeLinecap="round"
-                        filter="url(#inkBlur)" 
-                        opacity="0.70"
-                      />
-                      
-                      <path 
-                        d="M 158 90 Q 160 88, 162 90" 
-                        stroke="#1c2a6b" 
-                        strokeWidth="3" 
-                        fill="none" 
-                        strokeLinecap="round"
-                        filter="url(#inkBlur)" 
-                        opacity="0.70"
-                      />
-                      
-                      {/* Тонкий завершающий росчерк */}
-                      <path 
-                        d="M 30 130 Q 120 135, 220 128 Q 320 122, 405 130" 
-                        stroke="#1c2a6b" 
-                        strokeWidth="1.4" 
-                        fill="none" 
-                        strokeLinecap="round"
-                        filter="url(#inkBlur)" 
-                        opacity="0.45"
-                      />
-                    </svg>
+                    <img 
+                      src="https://cdn.poehali.dev/files/2c510440-16a2-4b97-8a3e-723b2df2bd87.png" 
+                      alt="Подпись Ahmet Yılmaz" 
+                      className="h-full w-auto opacity-85"
+                    />
                     
                     {/* Яркая печать банка поверх подписи */}
-                    <div className="absolute top-1/2 right-10 -translate-y-1/2 w-32 h-32 pointer-events-none">
+                    <div className="absolute top-1/2 right-8 -translate-y-1/2 w-32 h-32 pointer-events-none">
                       <svg viewBox="0 0 200 200" className="w-full h-full">
                         <circle cx="100" cy="100" r="96" fill="none" stroke="#003d82" strokeWidth="4" opacity="0.65"/>
                         <circle cx="100" cy="100" r="88" fill="none" stroke="#003d82" strokeWidth="3" opacity="0.60"/>
