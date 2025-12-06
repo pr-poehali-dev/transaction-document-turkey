@@ -171,15 +171,50 @@ const TransferDocument = () => {
                 </div>
                 
                 <div className="text-right">
-                  <div className="mb-3 h-20 flex items-center justify-end">
-                    <svg viewBox="0 0 300 100" className="h-full w-auto">
-                      <path d="M 20 50 Q 40 20, 60 50 T 100 50" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      <path d="M 100 50 L 110 35 L 120 50" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      <path d="M 130 35 Q 140 45, 150 35 Q 160 50, 170 35" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      <path d="M 180 50 Q 190 30, 200 50 Q 210 65, 220 50" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      <path d="M 225 50 L 240 50 M 235 35 L 235 65" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      <path d="M 250 35 Q 260 50, 270 35 L 275 60" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      <path d="M 10 70 Q 50 65, 90 75" stroke="#001f5c" strokeWidth="2" fill="none" opacity="0.6" strokeLinecap="round"/>
+                  <div className="mb-3 h-24 flex items-center justify-end">
+                    <svg viewBox="0 0 350 120" className="h-full w-auto">
+                      <defs>
+                        <filter id="inkBlur">
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.3" />
+                        </filter>
+                      </defs>
+                      
+                      {/* Первая буква A - большая и декоративная */}
+                      <path d="M 15 75 Q 25 15, 45 45 Q 50 60, 45 75" stroke="#001f5c" strokeWidth="2.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 20 55 L 42 55" stroke="#001f5c" strokeWidth="2.2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 45 75 Q 55 85, 65 75" stroke="#001f5c" strokeWidth="2.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      
+                      {/* hmet - курсивное продолжение */}
+                      <path d="M 70 45 L 70 75 Q 72 80, 75 78" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 70 55 Q 78 48, 85 55 Q 88 62, 85 70" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 92 50 Q 95 45, 98 50 L 98 75 Q 100 80, 105 78" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 92 55 Q 100 52, 107 55" stroke="#001f5c" strokeWidth="1.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 112 52 Q 120 48, 127 55 Q 130 62, 127 72" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 132 52 Q 138 50, 142 55 L 142 72" stroke="#001f5c" strokeWidth="1.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      
+                      {/* Пробел и переход */}
+                      <path d="M 145 65 Q 155 60, 165 65" stroke="#001f5c" strokeWidth="1.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.5"/>
+                      
+                      {/* Y - вторая фамилия начинается */}
+                      <path d="M 170 50 Q 180 55, 185 50 L 190 70 Q 192 78, 188 85" stroke="#001f5c" strokeWidth="2.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 185 50 L 195 60" stroke="#001f5c" strokeWidth="2.2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      
+                      {/* ılmaz - продолжение фамилии */}
+                      <path d="M 200 65 L 200 75" stroke="#001f5c" strokeWidth="1.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 200 52 L 200 54" stroke="#001f5c" strokeWidth="1.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 207 45 L 207 75 Q 210 80, 215 78" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 220 55 Q 228 50, 235 55 L 235 75 Q 237 80, 242 78" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 220 55 Q 228 52, 235 55" stroke="#001f5c" strokeWidth="1.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 247 55 Q 255 52, 262 58 Q 265 68, 260 75" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      <path d="M 268 60 Q 273 58, 278 62 L 283 75" stroke="#001f5c" strokeWidth="1.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      
+                      {/* Финальный росчерк */}
+                      <path d="M 283 75 Q 295 72, 305 78 Q 315 85, 325 82" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.75"/>
+                      <path d="M 315 85 Q 320 88, 325 85" stroke="#001f5c" strokeWidth="1.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.7"/>
+                      
+                      {/* Дополнительные штрихи для реалистичности */}
+                      <path d="M 45 45 Q 48 42, 50 45" stroke="#001f5c" strokeWidth="1.2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.6"/>
+                      <path d="M 12 78 Q 30 82, 50 80" stroke="#001f5c" strokeWidth="1" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.4"/>
                     </svg>
                   </div>
                   <div className="border-t border-slate-400 pt-1">
