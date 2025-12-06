@@ -159,94 +159,136 @@ const TransferDocument = () => {
                 
                 <div className="text-right">
                   <div className="mb-3 h-32 flex items-center justify-end relative">
-                    <svg viewBox="0 0 500 150" className="h-full w-auto">
+                    <svg viewBox="0 0 400 130" className="h-full w-auto">
                       <defs>
                         <filter id="inkBlur">
-                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.35" />
-                        </filter>
-                        <filter id="inkSpread">
-                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.6" />
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" />
                         </filter>
                       </defs>
                       
-                      {/* Начальная декоративная петля - изящный завиток */}
+                      {/* Y - начальная буква с декоративным завитком */}
                       <path 
-                        d="M 35 85 Q 28 75, 30 65 Q 32 55, 42 50 Q 52 46, 62 51 Q 70 56, 74 65 Q 76 74, 73 83 Q 70 90, 63 94 Q 58 97, 52 94 Q 48 91, 47 86" 
+                        d="M 30 45 Q 35 40, 40 43 Q 48 48, 55 55 L 65 70 Q 70 78, 72 88 Q 74 98, 70 108 Q 68 115, 62 118" 
                         stroke="#1a2766" 
-                        strokeWidth="2.0" 
+                        strokeWidth="2.5" 
                         fill="none" 
                         strokeLinecap="round" 
                         strokeLinejoin="round"
                         filter="url(#inkBlur)" 
-                        opacity="0.85"
+                        opacity="0.88"
                       />
-                      
-                      {/* Основная линия подписи - плавная и непрерывная */}
                       <path 
-                        d="M 52 86 Q 58 82, 65 80 Q 75 78, 85 81 Q 95 85, 103 91 Q 110 97, 115 103 Q 118 107, 123 106 Q 128 104, 133 99 L 143 87 Q 150 78, 160 73 Q 172 68, 184 72 Q 196 77, 206 86 Q 214 93, 220 101 Q 224 107, 229 109 Q 234 110, 239 106 Q 244 101, 250 93 L 261 78 Q 270 67, 282 62 Q 295 58, 308 63 Q 320 69, 330 79 Q 338 88, 344 98 Q 348 105, 353 108 Q 358 110, 363 106 Q 368 101, 374 92 L 385 76 Q 394 64, 406 59 Q 419 55, 432 61 Q 444 68, 453 79 Q 460 88, 465 98 Q 468 105, 472 107" 
+                        d="M 50 50 L 68 72" 
                         stroke="#1a2766" 
                         strokeWidth="2.3" 
                         fill="none" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
+                        strokeLinecap="round"
                         filter="url(#inkBlur)" 
-                        opacity="0.87"
+                        opacity="0.88"
                       />
                       
-                      {/* Финальный элегантный росчерк */}
+                      {/* ı - точка и вертикальная линия */}
+                      <circle cx="95" cy="45" r="2.5" fill="#1a2766" opacity="0.88" filter="url(#inkBlur)"/>
                       <path 
-                        d="M 472 107 Q 478 108, 484 106 Q 492 103, 498 98 L 505 90 Q 510 84, 513 80" 
-                        stroke="#1a2766" 
-                        strokeWidth="2.0" 
-                        fill="none" 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round"
-                        filter="url(#inkBlur)" 
-                        opacity="0.82"
-                      />
-                      
-                      {/* Декоративный перечеркивающий штрих по центру */}
-                      <path 
-                        d="M 120 95 Q 180 88, 240 92 Q 300 96, 360 90" 
+                        d="M 95 60 L 95 85" 
                         stroke="#1a2766" 
                         strokeWidth="2.2" 
                         fill="none" 
                         strokeLinecap="round"
                         filter="url(#inkBlur)" 
-                        opacity="0.75"
+                        opacity="0.88"
                       />
                       
-                      {/* Нижний элегантный росчерк */}
+                      {/* l - вертикальная линия */}
                       <path 
-                        d="M 40 105 Q 100 112, 160 108 Q 220 105, 280 110 Q 340 115, 400 109 Q 450 105, 490 108" 
+                        d="M 115 35 L 115 85 Q 117 90, 122 88" 
                         stroke="#1a2766" 
-                        strokeWidth="1.5" 
+                        strokeWidth="2.2" 
                         fill="none" 
                         strokeLinecap="round"
                         filter="url(#inkBlur)" 
-                        opacity="0.45"
+                        opacity="0.88"
                       />
                       
-                      {/* Дополнительные тонкие линии для объема */}
+                      {/* m - три арки */}
                       <path 
-                        d="M 62 51 Q 64 49, 66 51 M 184 72 Q 186 70, 188 72 M 308 63 Q 310 61, 312 63" 
+                        d="M 135 85 L 135 60 Q 138 55, 145 57 Q 150 59, 152 65 L 152 85" 
                         stroke="#1a2766" 
-                        strokeWidth="2.8" 
+                        strokeWidth="2.2" 
                         fill="none" 
                         strokeLinecap="round"
-                        filter="url(#inkSpread)" 
-                        opacity="0.50"
+                        filter="url(#inkBlur)" 
+                        opacity="0.88"
+                      />
+                      <path 
+                        d="M 152 60 Q 155 55, 162 57 Q 167 59, 169 65 L 169 85" 
+                        stroke="#1a2766" 
+                        strokeWidth="2.2" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.88"
+                      />
+                      <path 
+                        d="M 169 60 Q 172 55, 179 57 Q 184 59, 186 65 L 186 85" 
+                        stroke="#1a2766" 
+                        strokeWidth="2.2" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.88"
+                      />
+                      
+                      {/* a - круглая буква */}
+                      <path 
+                        d="M 200 85 L 200 65 Q 203 58, 212 58 Q 220 58, 225 65 Q 228 72, 225 80 Q 220 85, 212 85 Q 208 85, 205 83" 
+                        stroke="#1a2766" 
+                        strokeWidth="2.2" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.88"
+                      />
+                      <path 
+                        d="M 225 85 L 225 60" 
+                        stroke="#1a2766" 
+                        strokeWidth="2.2" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.88"
+                      />
+                      
+                      {/* z - зигзаг с росчерком */}
+                      <path 
+                        d="M 240 60 L 265 60 L 240 85 L 270 85 Q 280 85, 290 82 Q 300 78, 310 72 Q 320 65, 330 62 Q 345 58, 360 65 Q 370 70, 375 78" 
+                        stroke="#1a2766" 
+                        strokeWidth="2.3" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.88"
+                      />
+                      
+                      {/* Декоративный нижний росчерк */}
+                      <path 
+                        d="M 30 100 Q 100 105, 180 100 Q 260 96, 340 102 Q 365 104, 380 102" 
+                        stroke="#1a2766" 
+                        strokeWidth="1.6" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.55"
                       />
                       
                       {/* Точки усиления нажима */}
-                      <ellipse cx="74" cy="65" rx="2" ry="1.5" fill="#1a2766" opacity="0.65" filter="url(#inkBlur)" transform="rotate(-25 74 65)"/>
-                      <ellipse cx="184" cy="72" rx="2" ry="1.5" fill="#1a2766" opacity="0.65" filter="url(#inkBlur)" transform="rotate(-15 184 72)"/>
-                      <ellipse cx="308" cy="63" rx="2" ry="1.5" fill="#1a2766" opacity="0.65" filter="url(#inkBlur)" transform="rotate(-20 308 63)"/>
-                      <ellipse cx="432" cy="61" rx="2" ry="1.5" fill="#1a2766" opacity="0.65" filter="url(#inkBlur)" transform="rotate(-18 432 61)"/>
+                      <ellipse cx="65" cy="70" rx="2" ry="1.5" fill="#1a2766" opacity="0.65" filter="url(#inkBlur)" transform="rotate(-30 65 70)"/>
+                      <ellipse cx="152" cy="65" rx="2" ry="1.5" fill="#1a2766" opacity="0.65" filter="url(#inkBlur)" transform="rotate(-10 152 65)"/>
+                      <ellipse cx="212" cy="72" rx="2" ry="1.5" fill="#1a2766" opacity="0.65" filter="url(#inkBlur)" transform="rotate(0 212 72)"/>
                     </svg>
                     
                     {/* Яркая печать банка поверх подписи */}
-                    <div className="absolute top-1/2 right-16 -translate-y-1/2 w-32 h-32 pointer-events-none">
+                    <div className="absolute top-1/2 right-8 -translate-y-1/2 w-32 h-32 pointer-events-none">
                       <svg viewBox="0 0 200 200" className="w-full h-full">
                         <circle cx="100" cy="100" r="96" fill="none" stroke="#003d82" strokeWidth="4" opacity="0.65"/>
                         <circle cx="100" cy="100" r="88" fill="none" stroke="#003d82" strokeWidth="3" opacity="0.60"/>
