@@ -152,72 +152,60 @@ const TransferDocument = () => {
 
             <div className="mt-8 pt-8 border-t border-slate-200">
               <div className="flex items-end justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="relative w-32 h-32">
-                    <svg viewBox="0 0 200 200" className="w-full h-full">
-                      <circle cx="100" cy="100" r="95" fill="none" stroke="#003d82" strokeWidth="3" opacity="0.3"/>
-                      <circle cx="100" cy="100" r="85" fill="none" stroke="#003d82" strokeWidth="2" opacity="0.3"/>
-                      <path d="M 100 30 L 100 50 M 170 100 L 150 100 M 100 170 L 100 150 M 30 100 L 50 100" stroke="#003d82" strokeWidth="2" opacity="0.3"/>
-                      <text x="100" y="85" textAnchor="middle" fill="#003d82" fontSize="16" fontWeight="bold" opacity="0.4">TÜRKİYE İŞ BANKASI</text>
-                      <text x="100" y="105" textAnchor="middle" fill="#003d82" fontSize="14" opacity="0.4">MERKEZ ŞUBESİ</text>
-                      <text x="100" y="125" textAnchor="middle" fill="#003d82" fontSize="12" opacity="0.4">İSTANBUL</text>
-                      <text x="100" y="145" textAnchor="middle" fill="#003d82" fontSize="10" fontFamily="monospace" opacity="0.3">06.12.2025</text>
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-xs text-slate-500">Dijital İmza</p>
-                    <p className="font-mono text-sm text-slate-700">SHA-256: 8f7a2b...</p>
-                  </div>
+                <div>
+                  <p className="text-xs text-slate-500 mb-1">Dijital İmza</p>
+                  <p className="font-mono text-sm text-slate-700">SHA-256: 8f7a2b...</p>
                 </div>
                 
                 <div className="text-right">
-                  <div className="mb-3 h-24 flex items-center justify-end">
-                    <svg viewBox="0 0 350 120" className="h-full w-auto">
+                  <div className="mb-3 h-32 flex items-center justify-end relative">
+                    {/* Подпись - одной линией без отрыва */}
+                    <svg viewBox="0 0 400 140" className="h-full w-auto">
                       <defs>
                         <filter id="inkBlur">
-                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.3" />
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" />
                         </filter>
                       </defs>
                       
-                      {/* Первая буква A - большая и декоративная */}
-                      <path d="M 15 75 Q 25 15, 45 45 Q 50 60, 45 75" stroke="#001f5c" strokeWidth="2.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 20 55 L 42 55" stroke="#001f5c" strokeWidth="2.2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 45 75 Q 55 85, 65 75" stroke="#001f5c" strokeWidth="2.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
+                      {/* Непрерывная линия подписи */}
+                      <path 
+                        d="M 20 80 Q 30 30, 50 60 Q 55 75, 52 85 Q 50 90, 48 88 L 50 85 Q 52 82, 55 80 Q 62 75, 70 78 Q 75 80, 78 85 L 80 95 Q 82 100, 85 98 Q 88 96, 90 92 Q 92 88, 95 85 Q 100 80, 108 82 Q 115 84, 120 88 Q 125 92, 128 95 Q 130 98, 132 96 L 135 92 Q 138 88, 142 85 Q 148 80, 155 82 Q 162 84, 168 88 Q 172 91, 175 94 Q 178 97, 182 95 L 188 90 Q 195 84, 205 82 Q 215 80, 225 85 L 230 90 Q 232 93, 235 95 L 240 100 Q 245 105, 250 102 L 255 95 Q 260 88, 268 85 Q 275 82, 283 85 Q 290 88, 295 92 L 300 98 Q 305 103, 312 100 Q 318 97, 322 92 L 328 85 Q 333 80, 340 82 Q 348 85, 355 90 L 365 100 Q 372 107, 380 105 Q 388 103, 392 98" 
+                        stroke="#001f5c" 
+                        strokeWidth="2.5" 
+                        fill="none" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.88"
+                      />
                       
-                      {/* hmet - курсивное продолжение */}
-                      <path d="M 70 45 L 70 75 Q 72 80, 75 78" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 70 55 Q 78 48, 85 55 Q 88 62, 85 70" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 92 50 Q 95 45, 98 50 L 98 75 Q 100 80, 105 78" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 92 55 Q 100 52, 107 55" stroke="#001f5c" strokeWidth="1.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 112 52 Q 120 48, 127 55 Q 130 62, 127 72" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 132 52 Q 138 50, 142 55 L 142 72" stroke="#001f5c" strokeWidth="1.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      
-                      {/* Пробел и переход */}
-                      <path d="M 145 65 Q 155 60, 165 65" stroke="#001f5c" strokeWidth="1.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.5"/>
-                      
-                      {/* Y - вторая фамилия начинается */}
-                      <path d="M 170 50 Q 180 55, 185 50 L 190 70 Q 192 78, 188 85" stroke="#001f5c" strokeWidth="2.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 185 50 L 195 60" stroke="#001f5c" strokeWidth="2.2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      
-                      {/* ılmaz - продолжение фамилии */}
-                      <path d="M 200 65 L 200 75" stroke="#001f5c" strokeWidth="1.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 200 52 L 200 54" stroke="#001f5c" strokeWidth="1.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 207 45 L 207 75 Q 210 80, 215 78" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 220 55 Q 228 50, 235 55 L 235 75 Q 237 80, 242 78" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 220 55 Q 228 52, 235 55" stroke="#001f5c" strokeWidth="1.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 247 55 Q 255 52, 262 58 Q 265 68, 260 75" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      <path d="M 268 60 Q 273 58, 278 62 L 283 75" stroke="#001f5c" strokeWidth="1.8" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.85"/>
-                      
-                      {/* Финальный росчерк */}
-                      <path d="M 283 75 Q 295 72, 305 78 Q 315 85, 325 82" stroke="#001f5c" strokeWidth="2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.75"/>
-                      <path d="M 315 85 Q 320 88, 325 85" stroke="#001f5c" strokeWidth="1.5" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.7"/>
-                      
-                      {/* Дополнительные штрихи для реалистичности */}
-                      <path d="M 45 45 Q 48 42, 50 45" stroke="#001f5c" strokeWidth="1.2" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.6"/>
-                      <path d="M 12 78 Q 30 82, 50 80" stroke="#001f5c" strokeWidth="1" fill="none" strokeLinecap="round" filter="url(#inkBlur)" opacity="0.4"/>
+                      {/* Легкие вариации толщины для реалистичности */}
+                      <path 
+                        d="M 50 60 Q 52 58, 54 60 M 120 88 Q 122 86, 124 88 M 240 100 Q 242 98, 244 100" 
+                        stroke="#001f5c" 
+                        strokeWidth="3" 
+                        fill="none" 
+                        strokeLinecap="round"
+                        filter="url(#inkBlur)" 
+                        opacity="0.5"
+                      />
                     </svg>
+                    
+                    {/* Печать банка поверх подписи */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 pointer-events-none">
+                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                        <circle cx="100" cy="100" r="95" fill="none" stroke="#003d82" strokeWidth="3" opacity="0.35"/>
+                        <circle cx="100" cy="100" r="85" fill="none" stroke="#003d82" strokeWidth="2" opacity="0.35"/>
+                        <path d="M 100 30 L 100 50 M 170 100 L 150 100 M 100 170 L 100 150 M 30 100 L 50 100" stroke="#003d82" strokeWidth="2" opacity="0.35"/>
+                        <text x="100" y="80" textAnchor="middle" fill="#003d82" fontSize="14" fontWeight="bold" opacity="0.4">TÜRKİYE İŞ</text>
+                        <text x="100" y="95" textAnchor="middle" fill="#003d82" fontSize="14" fontWeight="bold" opacity="0.4">BANKASI</text>
+                        <text x="100" y="112" textAnchor="middle" fill="#003d82" fontSize="11" opacity="0.4">MERKEZ ŞUBESİ</text>
+                        <text x="100" y="130" textAnchor="middle" fill="#003d82" fontSize="10" opacity="0.4">İSTANBUL</text>
+                        <text x="100" y="145" textAnchor="middle" fill="#003d82" fontSize="9" fontFamily="monospace" opacity="0.35">06.12.2025</text>
+                      </svg>
+                    </div>
                   </div>
-                  <div className="border-t border-slate-400 pt-1">
+                  <div className="border-t border-slate-400 pt-1 mt-2">
                     <p className="font-semibold text-slate-900">Ahmet Yılmaz</p>
                     <p className="text-xs text-slate-500">Şube Müdürü</p>
                   </div>
