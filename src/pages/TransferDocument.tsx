@@ -144,9 +144,24 @@ const TransferDocument = () => {
                 <p className="text-xs text-slate-500 mb-2">Transfer Ücreti</p>
                 <p className="font-semibold text-slate-900">$25.00</p>
               </div>
-              <div>
+              <div className="relative">
                 <p className="text-xs text-slate-500 mb-2">Toplam Çekilen Tutar</p>
                 <p className="font-semibold text-slate-900">$275,025.00</p>
+                
+                {/* Печать банка поверх суммы */}
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-40 h-40 pointer-events-none">
+                  <svg viewBox="0 0 200 200" className="w-full h-full">
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#003d82" strokeWidth="3.5" opacity="0.38"/>
+                    <circle cx="100" cy="100" r="85" fill="none" stroke="#003d82" strokeWidth="2.5" opacity="0.38"/>
+                    <circle cx="100" cy="100" r="75" fill="none" stroke="#003d82" strokeWidth="1.5" opacity="0.25"/>
+                    <path d="M 100 25 L 100 48 M 175 100 L 152 100 M 100 175 L 100 152 M 25 100 L 48 100" stroke="#003d82" strokeWidth="2.5" opacity="0.38"/>
+                    <text x="100" y="75" textAnchor="middle" fill="#003d82" fontSize="15" fontWeight="bold" opacity="0.42">TÜRKİYE İŞ</text>
+                    <text x="100" y="92" textAnchor="middle" fill="#003d82" fontSize="15" fontWeight="bold" opacity="0.42">BANKASI A.Ş.</text>
+                    <text x="100" y="112" textAnchor="middle" fill="#003d82" fontSize="12" opacity="0.42">MERKEZ ŞUBESİ</text>
+                    <text x="100" y="128" textAnchor="middle" fill="#003d82" fontSize="11" opacity="0.42">İSTANBUL</text>
+                    <text x="100" y="145" textAnchor="middle" fill="#003d82" fontSize="10" fontFamily="monospace" opacity="0.38">06.12.2025</text>
+                  </svg>
+                </div>
               </div>
             </div>
 
@@ -158,54 +173,39 @@ const TransferDocument = () => {
                 </div>
                 
                 <div className="text-right">
-                  <div className="mb-3 h-32 flex items-center justify-end relative">
-                    {/* Подпись - одной линией без отрыва */}
-                    <svg viewBox="0 0 400 140" className="h-full w-auto">
+                  <div className="mb-3 h-28 flex items-center justify-end">
+                    <svg viewBox="0 0 450 120" className="h-full w-auto">
                       <defs>
                         <filter id="inkBlur">
-                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" />
+                          <feGaussianBlur in="SourceGraphic" stdDeviation="0.5" />
                         </filter>
                       </defs>
                       
-                      {/* Непрерывная линия подписи */}
+                      {/* Подпись в стиле изображения - начальная петля */}
                       <path 
-                        d="M 20 80 Q 30 30, 50 60 Q 55 75, 52 85 Q 50 90, 48 88 L 50 85 Q 52 82, 55 80 Q 62 75, 70 78 Q 75 80, 78 85 L 80 95 Q 82 100, 85 98 Q 88 96, 90 92 Q 92 88, 95 85 Q 100 80, 108 82 Q 115 84, 120 88 Q 125 92, 128 95 Q 130 98, 132 96 L 135 92 Q 138 88, 142 85 Q 148 80, 155 82 Q 162 84, 168 88 Q 172 91, 175 94 Q 178 97, 182 95 L 188 90 Q 195 84, 205 82 Q 215 80, 225 85 L 230 90 Q 232 93, 235 95 L 240 100 Q 245 105, 250 102 L 255 95 Q 260 88, 268 85 Q 275 82, 283 85 Q 290 88, 295 92 L 300 98 Q 305 103, 312 100 Q 318 97, 322 92 L 328 85 Q 333 80, 340 82 Q 348 85, 355 90 L 365 100 Q 372 107, 380 105 Q 388 103, 392 98" 
-                        stroke="#001f5c" 
-                        strokeWidth="2.5" 
+                        d="M 25 75 Q 20 65, 22 55 Q 25 45, 35 42 Q 45 40, 52 48 Q 58 55, 58 65 Q 58 75, 50 82 Q 45 86, 42 84 Q 40 82, 42 78 L 45 70 Q 48 62, 55 58 Q 62 55, 72 58 L 85 68 Q 92 75, 95 82 L 98 90 Q 100 95, 105 92 L 112 85 Q 118 78, 125 75 L 135 72 Q 145 70, 155 73 L 168 80 Q 175 85, 180 88 L 188 92 Q 195 95, 202 92 L 210 85 Q 218 75, 228 72 Q 238 70, 248 75 L 260 85 Q 268 92, 275 95 L 285 98 Q 295 100, 305 95 L 315 88 Q 322 82, 328 78 L 338 72 Q 348 68, 358 70 Q 368 72, 375 78 L 385 88 Q 392 95, 398 98 L 408 102 Q 418 105, 428 100 Q 435 96, 438 90" 
+                        stroke="#2c3e8f" 
+                        strokeWidth="2.8" 
                         fill="none" 
                         strokeLinecap="round" 
                         strokeLinejoin="round"
                         filter="url(#inkBlur)" 
-                        opacity="0.88"
+                        opacity="0.85"
                       />
                       
-                      {/* Легкие вариации толщины для реалистичности */}
+                      {/* Дополнительные штрихи для объема */}
                       <path 
-                        d="M 50 60 Q 52 58, 54 60 M 120 88 Q 122 86, 124 88 M 240 100 Q 242 98, 244 100" 
-                        stroke="#001f5c" 
-                        strokeWidth="3" 
+                        d="M 45 70 Q 47 68, 49 70 M 155 73 Q 157 71, 159 73 M 305 95 Q 307 93, 309 95" 
+                        stroke="#2c3e8f" 
+                        strokeWidth="3.5" 
                         fill="none" 
                         strokeLinecap="round"
                         filter="url(#inkBlur)" 
-                        opacity="0.5"
+                        opacity="0.6"
                       />
                     </svg>
-                    
-                    {/* Печать банка поверх подписи */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-28 h-28 pointer-events-none">
-                      <svg viewBox="0 0 200 200" className="w-full h-full">
-                        <circle cx="100" cy="100" r="95" fill="none" stroke="#003d82" strokeWidth="3" opacity="0.35"/>
-                        <circle cx="100" cy="100" r="85" fill="none" stroke="#003d82" strokeWidth="2" opacity="0.35"/>
-                        <path d="M 100 30 L 100 50 M 170 100 L 150 100 M 100 170 L 100 150 M 30 100 L 50 100" stroke="#003d82" strokeWidth="2" opacity="0.35"/>
-                        <text x="100" y="80" textAnchor="middle" fill="#003d82" fontSize="14" fontWeight="bold" opacity="0.4">TÜRKİYE İŞ</text>
-                        <text x="100" y="95" textAnchor="middle" fill="#003d82" fontSize="14" fontWeight="bold" opacity="0.4">BANKASI</text>
-                        <text x="100" y="112" textAnchor="middle" fill="#003d82" fontSize="11" opacity="0.4">MERKEZ ŞUBESİ</text>
-                        <text x="100" y="130" textAnchor="middle" fill="#003d82" fontSize="10" opacity="0.4">İSTANBUL</text>
-                        <text x="100" y="145" textAnchor="middle" fill="#003d82" fontSize="9" fontFamily="monospace" opacity="0.35">06.12.2025</text>
-                      </svg>
-                    </div>
                   </div>
-                  <div className="border-t border-slate-400 pt-1 mt-2">
+                  <div className="border-t border-slate-400 pt-1">
                     <p className="font-semibold text-slate-900">Ahmet Yılmaz</p>
                     <p className="text-xs text-slate-500">Şube Müdürü</p>
                   </div>
