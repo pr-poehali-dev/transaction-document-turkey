@@ -167,7 +167,7 @@ const TransferDocument = () => {
                     
                     {/* Яркая печать банка поверх подписи по центру */}
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 pointer-events-none">
-                      <svg viewBox="0 0 200 200" className="w-full h-full">
+                      <svg viewBox="0 0 200 200" className="w-full h-full" style={{background: 'transparent'}}>
                         <circle cx="100" cy="100" r="96" fill="none" stroke="#003d82" strokeWidth="4" opacity="0.65"/>
                         <circle cx="100" cy="100" r="88" fill="none" stroke="#003d82" strokeWidth="3" opacity="0.60"/>
                         <circle cx="100" cy="100" r="78" fill="none" stroke="#003d82" strokeWidth="2" opacity="0.50"/>
