@@ -163,6 +163,7 @@ const TransferDocument = () => {
                       src="https://cdn.poehali.dev/files/2c510440-16a2-4b97-8a3e-723b2df2bd87.png" 
                       alt="Подпись Ahmet Yılmaz" 
                       className="h-full w-auto opacity-85"
+                      style={{mixBlendMode: 'multiply'}}
                     />
                     
                     {/* Яркая печать банка поверх подписи по центру */}
