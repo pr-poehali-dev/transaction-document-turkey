@@ -144,24 +144,9 @@ const TransferDocument = () => {
                 <p className="text-xs text-slate-500 mb-2">Transfer Ücreti</p>
                 <p className="font-semibold text-slate-900">$25.00</p>
               </div>
-              <div className="relative">
+              <div>
                 <p className="text-xs text-slate-500 mb-2">Toplam Çekilen Tutar</p>
                 <p className="font-semibold text-slate-900">$275,025.00</p>
-                
-                {/* Печать банка поверх суммы */}
-                <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-40 h-40 pointer-events-none">
-                  <svg viewBox="0 0 200 200" className="w-full h-full">
-                    <circle cx="100" cy="100" r="95" fill="none" stroke="#003d82" strokeWidth="3.5" opacity="0.38"/>
-                    <circle cx="100" cy="100" r="85" fill="none" stroke="#003d82" strokeWidth="2.5" opacity="0.38"/>
-                    <circle cx="100" cy="100" r="75" fill="none" stroke="#003d82" strokeWidth="1.5" opacity="0.25"/>
-                    <path d="M 100 25 L 100 48 M 175 100 L 152 100 M 100 175 L 100 152 M 25 100 L 48 100" stroke="#003d82" strokeWidth="2.5" opacity="0.38"/>
-                    <text x="100" y="75" textAnchor="middle" fill="#003d82" fontSize="15" fontWeight="bold" opacity="0.42">TÜRKİYE İŞ</text>
-                    <text x="100" y="92" textAnchor="middle" fill="#003d82" fontSize="15" fontWeight="bold" opacity="0.42">BANKASI A.Ş.</text>
-                    <text x="100" y="112" textAnchor="middle" fill="#003d82" fontSize="12" opacity="0.42">MERKEZ ŞUBESİ</text>
-                    <text x="100" y="128" textAnchor="middle" fill="#003d82" fontSize="11" opacity="0.42">İSTANBUL</text>
-                    <text x="100" y="145" textAnchor="middle" fill="#003d82" fontSize="10" fontFamily="monospace" opacity="0.38">06.12.2025</text>
-                  </svg>
-                </div>
               </div>
             </div>
 
