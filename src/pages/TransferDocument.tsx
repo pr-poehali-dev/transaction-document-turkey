@@ -25,11 +25,13 @@ const TransferDocument = () => {
             <div className="mb-8 pb-6 border-b-2 border-slate-200">
               <div className="flex items-center justify-between">
                 <div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 rounded-xl flex items-center justify-center mb-3">
-                    <Icon name="Building2" size={32} className="text-white" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-slate-900">TÜRK BANKASI A.Ş.</h2>
-                  <p className="text-sm text-slate-600 mt-1">Merkez Şubesi - İstanbul</p>
+                  <img 
+                    src="https://cdn.poehali.dev/files/f673445c-e403-43f3-86db-8bb619122c6e.jpg" 
+                    alt="İşbank Logo" 
+                    className="h-12 mb-3"
+                  />
+                  <h2 className="text-3xl font-bold text-[#003d82]">İŞBANK</h2>
+                  <p className="text-sm text-slate-600 mt-1">Türkiye İş Bankası A.Ş. • Merkez Şubesi - İstanbul</p>
                 </div>
                 <div className="text-right">
                   <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 px-4 py-2 rounded-full mb-2">
