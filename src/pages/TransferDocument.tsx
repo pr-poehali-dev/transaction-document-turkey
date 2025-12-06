@@ -30,7 +30,6 @@ const TransferDocument = () => {
                     alt="İşbank Logo" 
                     className="h-12 mb-3"
                   />
-                  <h2 className="text-3xl font-bold text-[#003d82]">İŞBANK</h2>
                   <p className="text-sm text-slate-600 mt-1">Türkiye İş Bankası A.Ş. • Merkez Şubesi - İstanbul</p>
                 </div>
                 <div className="text-right">
