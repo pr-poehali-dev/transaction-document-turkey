@@ -153,8 +153,16 @@ const TransferDocument = () => {
             <div className="mt-8 pt-8 border-t border-slate-200">
               <div className="flex items-end justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center border-4 border-white shadow-lg">
-                    <Icon name="CheckCircle2" size={32} className="text-[#003d82]" />
+                  <div className="relative w-32 h-32">
+                    <svg viewBox="0 0 200 200" className="w-full h-full">
+                      <circle cx="100" cy="100" r="95" fill="none" stroke="#003d82" strokeWidth="3" opacity="0.3"/>
+                      <circle cx="100" cy="100" r="85" fill="none" stroke="#003d82" strokeWidth="2" opacity="0.3"/>
+                      <path d="M 100 30 L 100 50 M 170 100 L 150 100 M 100 170 L 100 150 M 30 100 L 50 100" stroke="#003d82" strokeWidth="2" opacity="0.3"/>
+                      <text x="100" y="85" textAnchor="middle" fill="#003d82" fontSize="16" fontWeight="bold" opacity="0.4">TÜRKİYE İŞ BANKASI</text>
+                      <text x="100" y="105" textAnchor="middle" fill="#003d82" fontSize="14" opacity="0.4">MERKEZ ŞUBESİ</text>
+                      <text x="100" y="125" textAnchor="middle" fill="#003d82" fontSize="12" opacity="0.4">İSTANBUL</text>
+                      <text x="100" y="145" textAnchor="middle" fill="#003d82" fontSize="10" fontFamily="monospace" opacity="0.3">06.12.2025</text>
+                    </svg>
                   </div>
                   <div>
                     <p className="text-xs text-slate-500">Dijital İmza</p>
@@ -163,10 +171,16 @@ const TransferDocument = () => {
                 </div>
                 
                 <div className="text-right">
-                  <div className="mb-3 h-16 flex items-center justify-end">
-                    <div className="text-4xl font-serif italic text-[#003d82] opacity-80" style={{fontFamily: 'Brush Script MT, cursive'}}>
-                      Ahmet Yılmaz
-                    </div>
+                  <div className="mb-3 h-20 flex items-center justify-end">
+                    <svg viewBox="0 0 300 100" className="h-full w-auto">
+                      <path d="M 20 50 Q 40 20, 60 50 T 100 50" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                      <path d="M 100 50 L 110 35 L 120 50" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                      <path d="M 130 35 Q 140 45, 150 35 Q 160 50, 170 35" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                      <path d="M 180 50 Q 190 30, 200 50 Q 210 65, 220 50" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                      <path d="M 225 50 L 240 50 M 235 35 L 235 65" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                      <path d="M 250 35 Q 260 50, 270 35 L 275 60" stroke="#001f5c" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                      <path d="M 10 70 Q 50 65, 90 75" stroke="#001f5c" strokeWidth="2" fill="none" opacity="0.6" strokeLinecap="round"/>
+                    </svg>
                   </div>
                   <div className="border-t border-slate-400 pt-1">
                     <p className="font-semibold text-slate-900">Ahmet Yılmaz</p>
